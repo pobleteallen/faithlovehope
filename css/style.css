@@ -1,0 +1,68 @@
+/*personal reset*/
+h1{font-size: 3rem !important;}
+h2{font-size: 2.5rem !important;}
+h3{font-size: 2rem !important;}
+h4{font-size: 1.5rem !important;}
+h5{font-size: 1rem !important;}
+
+input,textarea { border-radius: 0 !important; }
+
+
+/*fixed menu webpage*/
+#fixed-menu { display: none; }
+#fixed-menu .mobile.item { display: none; }
+
+#header
+{
+	background: url('../img/header.jpg') no-repeat top center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	min-height: 100vh !important;
+}
+
+#logo { margin-top: 10vh; }
+
+ 
+#feedbacks, 
+#aboutus, 
+#contactus
+{
+	padding-top: 8rem ;
+	padding-bottom: 8rem ;
+}
+
+#aboutus p
+{
+	margin-top: 3rem;
+}
+
+#contactus 
+{ 
+	background: url('../img/flowers.jpg') no-repeat center center; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+	.testimonial-holder { position: relative; min-height: 15rem; }
+	#testimonial { padding-top: 5rem ; position: absolute; border: none !important;}
+
+
+
+@media only screen and (max-width: 700px){
+	
+#feedbacks, 
+#aboutus, 
+#contactus
+{
+	padding-top: 5rem ;
+	padding-bottom: 5rem ;
+}
+
+#fixed-menu .mobile.item { display: none; }
+#logo { margin-top: 10vh;}
+.testimonial-holder { min-height: 75vh; }
+
+}
