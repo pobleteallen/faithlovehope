@@ -4,7 +4,7 @@ h2{font-size: 2.5rem !important;}
 h3{font-size: 2rem !important;}
 h4{font-size: 1.5rem !important;}
 h5{font-size: 1rem !important;}
-
+body { background: #fcf1f1; color: #303030 !important;}
 input,textarea { border-radius: 0 !important; }
 
 
@@ -14,7 +14,7 @@ input,textarea { border-radius: 0 !important; }
 
 #header
 {
-	background: url('../img/header.jpg') no-repeat top center;
+	background: url('../img/flowers2.jpg') no-repeat top center;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
