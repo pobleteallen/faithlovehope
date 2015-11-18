@@ -7,7 +7,7 @@
         <title>Faith • Hope • Love</title>
 
         <!-- Optimized mobile viewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
         <meta name="apple-mobile-web-app-capable" content="yes">        
 
         <!-- Image Links -->
@@ -17,34 +17,57 @@
         <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png"> -->
 
         <!-- CSS Links -->
-        
         <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css"/>
         <link rel="stylesheet" type="text/css" href="css/style.css"/>
     
-        
+        <!-- loading while page is not yet loaded -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script>
+            $(window).load(function(){
+                $('#site-loader').fadeOut(1000);
+                $('body').css({'overflow-y': 'visible'});
+            })
+        </script>
           
     </head>
     <body>
+        <!-- Site Loader -->
+        <div id="site-loader">
+                <i class="huge spinner loading icon"></i>
+                <h2>Loading. . .</h2>
+        </div>
         
         <!-- sidebar menu -->
         <div class="ui vertical very thin inverted sidebar menu">
             <a href="#header" class="item">Home</a>
-            <a href="#services" class="item">Services</a>
+            <a href="#aboutus" class="item">About Us</a>
+            <a href="#products" class="item">Products</a>
             <a href="#feedbacks" class="item">Feedbacks</a>
-            <a href="#aboutus" class="item">About us</a>
             <a href="#contactus" class="item">Contact us</a>
-            <a href="dashboard" class="item">Extra</a>
         </div>
 
-        <!-- fixed menu -->
-       <!--  <div id="fixed-menu" class="ui inverted large fixed menu"> 
-            <div class="ui container">
-                <a class="mobile item"><i class="circular inverted large sidebar icon"></i></a> 
-                <div class="item header"><img src="img/logo.png"></div>
-                <a href="#aboutus" class="item">About us</a>
-                <a href="#services" class="item">Products</a>
-                <a href="#feedbacks" class="item">Feedbacks</a>
-                <a href="#contactus" class="item">Contact us</a> 
+        <!-- list menu -->
+        <ul id="navigation"> 
+            <li><a href="#header" class="active" >○</a></li>
+            <li><a href="#aboutus" >○</a></li>
+            <li><a href="#products" >○</a></li>
+            <li><a href="#feedbacks" >○</a></li>
+            <li><a href="#contactus" >○</a></li>
+        </ul>
+
+        <i id="mobile-menu" class="link large inverted sidebar icon icon"></i> 
+
+        <!-- products slideshow -->
+        <!-- <div id="products-slide" class="ui inverted vertical segment">
+            <div class="ui two column grid">
+                <div id="product-image" class="eight wide column">
+                    <img src="img/products/purelove.jpg">
+                </div>
+                <div id="product-description" class="eight wide column teal">
+                    <h3 class="ui center aligned header">Pure Love</h3>
+                    <div class="ui hidden divider"></div>
+                   Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                </div>
             </div>
         </div> -->
 
@@ -53,48 +76,102 @@
             <!-- navigate site button  -->
             <i id="navigate-site" class="link huge inverted angle double down icon" 
             style="position: absolute; bottom: 1%; left: 50%; transform: translate(-50%, -1%); z-index: 5;"></i>
-            <div class="ui container">
-                <div class="ui vertical segment">
-                    <img id="logo" class="ui centered large image" src="img/logo.png">
-                </div>
+            <img id="logo" class="ui large image" src="img/logo.png">
             </div>
         </div>
 
         <!-- ABOUT US -->
         <div id="aboutus" class="ui vertical segment">         
-            <div class="ui text container">
-                <h2 class="ui horizontal divider">about us</h2>
-                <div class="ui hidden divider"></div>
-                <p align="center">Dolore cuml dia sed in lacus ut eniascet inger es sitet amet
-                 eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. 
-                 Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete.
-                </p>
+            <div class="ui container">
+                <div class="ui stackable two column grid">
+                    <div class="column">
+                        <h1 class="ui horizontal divider">Our Story</h1>
+                        <p style="margin-top: 5rem; line-height: 2rem;">Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete.
+                        </p>
+                    </div>
+                    <div class="column" style="min-height: 100%;">
+                        
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- products -->
-        <div id="products" class="ui inverted vertical segment">
-            <div class="ui stackable two column grid">
-                <div class="column">
-                    <img class="ui large image" src="img/flowers.jpg">
+        <!-- PRODUCTS -->
+        <div id="products" class="ui vertical segment">
+            <div class="ui stackable equal width grid">
+                <div class="two column row">
+                    <div class="column">
+                        <img class="ui image" src="img/products/purelove.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">Pure Love</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img class="ui image" src="img/products/motherlove.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">Mother's Love</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
                 </div>
-                <div class="column">
-                    <img class="ui small image" src="img/flowers.jpg">
+                <div class="three column row">
+                    <div class="column">
+                        <img class="ui image" src="img/products/amp.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">AMP</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img class="ui image" src="img/products/cucumbermist.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">Cucumber Hydrating Mist</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img class="ui image" src="img/products/tomatokokum.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">Tomato Kokum</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
+                </div>
+                <div class="two column row">
+                    <div class="column">
+                        <img class="ui image" src="img/products/bugabye.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">Bug-a-Bye</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
+                    <div class="column">
+                        <img class="ui image" src="img/products/coffeesoap.jpg">
+                        <div class="ui vertical segment product-description">
+                            <h3 class="ui center aligned header">Coffee Soap</h3>
+                            <div class="ui hidden divider"></div>
+                           Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </div>
 
         <!-- FEEDBACKS -->
         <div id="feedbacks" class="ui vertical segment">  
-            <div class="ui text container">
-                <h2 class="ui horizontal divider">feedback</h2>
-                <div class="testimonial-holder">
+            <div class="ui text container" >
+                <h1 class="ui horizontal divider">feedback</h1>
+                <div class="feedback-holder">
                     <div id="testimonial" class="ui testi vertical segment">
-                        <p align="left">
-                            <i class="quote left icon"></i>1Dolore cuml dia sed in lacus ut eniascet inger es sitet amet
-                             eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. 
-                             Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete.<i class="quote right icon"></i>
+                        <p>
+                            <q>1Dolore cuml dia sed in lacus ut eniascet inger es sitet ameteismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete.</q>
                         </p>
                         <p align="right">
                             - Ms. Dolore Cuml
@@ -103,10 +180,7 @@
 
                     <div id="testimonial" class="ui testi vertical segment">
                         <p>
-                            <i class="quote left icon"></i>Maecenas fermentum nulla purus, ac commodo ipsum pretium at. 
-                            Etiam vitae luctus metus. Mauris nunc nisl, elementum eu molestie eget, ultricies sit amet libero. 
-                            Suspendisse et tempus odio. Morbi vel aliquam nulla, tristique laoreet risus.eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme.Dolore cuml dia sed in lacus ut eniascet inger es sitet amet
-                     eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme<i class="quote right icon"></i>
+                            <q>Maecenas fermentum nulla purus, ac commodo ipsum pretium at. Etiam vitae luctus metus Mauris nunc nisl, elementum eu molestie eget, ultricies sit amet libero. Suspendisse et tempus odio. Morbi vel aliquam nulla, tristique laoreet risus.eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme.Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme</q>
                         </p>
                         <p align="right">
                             - Ms. Dolore Cuml
@@ -134,7 +208,7 @@
         </div>
         
         <!-- Jquery Link -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        
         <script src="js/script.js"></script>
         <script src="semantic/semantic.min.js"></script>
     </body>

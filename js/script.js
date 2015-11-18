@@ -2,62 +2,58 @@ $(document).ready(function(){
 
 	//after user passed the header div fixed menu will appear
 	$(window).scroll(function(){
-		
-		if($(window).scrollTop() > 0)
-		{
-			if($(window).width() > 700)
-			{
-				$('#fixed-menu').css('display','inline-block');
-			}
-			else
-			{
-				$('#fixed-menu').addClass('secondary');
-				$('#fixed-menu .item:gt(0)').css('display','none');
-				$('#fixed-menu, #fixed-menu .mobile.item').css('display','inline-block');
-			}	
-		}
-		else
-		{
-			$('#fixed-menu').css('display','none');
-		}
+
+		// if($(this).scrollTop() < $('#header')[0].scrollHeight)
+		// {
+		// 	var percentage = Math.round(($(this).scrollTop() / $('#header')[0].scrollHeight)*100);
+		// 	$('#aboutus > *').animate({opacity: percentage/100}, 20);
+		// }
+
+		// if($(this).scrollTop() < $('#contactus')[0].scrollHeight)
+		// {
+		// 	$('#navigation a').text('○');
+		// 	$('#navigation a[href="#feedbacks"]').text('•');
+		// }
+		// else if($(this).scrollTop() < $('#feedbacks')[0].scrollHeight)
+		// {
+		// 	$('#navigation a').text('○');
+		// 	$('#navigation a[href="#products"]').text('•');
+		// }
+		// else if($(this).scrollTop() < $('#products')[0].scrollHeight)
+		// {
+		// 	$('#navigation a').text('○');
+		// 	$('#navigation a[href="#aboutus"]').text('•');
+		// }
+		// else if($(this).scrollTop() < $('#aboutus')[0].scrollHeight)
+		// {
+		// 	$('#navigation a').text('○');
+		// 	$('#navigation a[href="#header"]').text('•');
+		// }
+		// else
+		// {
+		// 	$('#navigation a').text('○');
+		// 	$('#navigation a[href="#contactus"]').text('•');
+		// }
 	});
 
-	//everytime the viewport change this will trigger
-	$(window).resize(function(){
-		//when ever the viewport is changing style of menu change
-		if($(window).width() > 700)
-		{	
-			$('#fixed-menu').removeClass('secondary');
-			$('#fixed-menu .item:gt(0)').css('display','inline-block');
-			$('#fixed-menu .mobile.item').css('display','none');			
-		}
-		else
-		{
-			$('#fixed-menu').addClass('secondary');
-			$('#fixed-menu .item:gt(0)').css('display','none');
-			$('#fixed-menu .mobile.item').css('display','inline-block');
-
-			//for dashboard whenever it trigger mobile viewport it will hide the sidebar
-			// $('.admin .content').css('margin-left','0');
-			// $('.admin .ui.sidebar').sidebar('toggle'); 
-		}
-	});
 
 	//slide to navigate site
 	$('#navigate-site').click(function(){
-		$('html,body').animate({ scrollTop: $('#header')[0].scrollHeight },'slow', function(){
-			$('body').css('overflow','auto');
-		});	
+		$('body').animate({ scrollTop: $('#header')[0].scrollHeight }, 1000);	
 	});
-
 	//menu internal link transition
-	$('.menu .item').click(function(){
-		$('html,body').animate({scrollTop : $($(this).attr('href')).offset().top},'slow');
+	$('#navigation a, .sidebar.menu a').click(function(){
+		$('html,body').animate({scrollTop : $($(this).attr('href')).offset().top}, 1000);
 		return false;
 	});
 
+	//mobile menu
+	$('#mobile-menu').click(function(){
+		$('.ui.sidebar').sidebar({overlay: true, scrollLock: true}).sidebar('show');
+	});
 
-	// feedback slide
+
+	//feedback slide
 	$('.testi:gt(0)').hide();
 	setInterval(function(){
 		$('.testi:first')
@@ -65,13 +61,21 @@ $(document).ready(function(){
 		.next()
 		.fadeOut(1000)
 		.end()
-		.appendTo('.testimonial-holder');
+		.appendTo('.feedback-holder');
 	}, 5000);
 
-	//mobile menu
-	$('#fixed-menu').on('click','.mobile.item',function(){
-		$('.ui.sidebar').sidebar({overlay: true, scrollLock: true}).sidebar('show');
+
+	//products description show when click the image (mobile mode)
+	$('#products .row .column').click(function(){
+		if($(window).width() < 700)
+		{
+			$('.product-description').not($(this).find('.product-description')).slideUp('slow');
+			$(this).find('.product-description').slideToggle('slow');
+		}
+
 	});
+
+	
 
 	
 	
