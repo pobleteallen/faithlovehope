@@ -79,16 +79,16 @@ $(document).ready(function(){
 
 
 	//products description show when click the image (mobile mode)
-	$('#products .row .column').hover(function(){
+	$('#products .row .column').click(function(){
 		if($(window).width() < 768)
 		{
 			$('.product-description').not($(this).find('.product-description')).slideUp();
-			$(this).find('.product-description').slideDown();
+			$(this).find('.product-description').slideToggle();
 		}
 		else
 		{
 			$('.product-description').not($(this).find('.product-description')).slideUp();
-			$(this).find('.segment').slideDown();
+			$(this).find('.segment').slideToggle();
 
 		}
 

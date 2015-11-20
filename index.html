@@ -23,18 +23,22 @@
         <!-- loading while page is not yet loaded -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script>
-            $(window).load(function(){
-                $('#site-loader').fadeOut(1000);
-                $('body').css({'overflow-y': 'visible'});
-            })
+             $(window).load(function(){
+                 $('#site-loader').fadeOut(1000, function(){
+                    $('body').css({'overflow-y': 'visible'});
+                 });
+                 
+             })
         </script>
           
     </head>
     <body>
         <!-- Site Loader -->
         <div id="site-loader">
+            <h4 class="ui icon header">
                 <i class="huge spinner loading icon"></i>
-                <h2>Loading. . .</h2>
+                <div class="sub header">Loading. . .</div>
+            </h4>
         </div>
         
         <!-- sidebar menu -->
@@ -42,7 +46,7 @@
             <a href="#header" class="item">Home</a>
             <a href="#aboutus" class="item">About Us</a>
             <a href="#products" class="item">Products</a>
-            <a href="#feedbacks" class="item">Feedbacks</a>
+            <!-- <a href="#feedbacks" class="item">Feedbacks</a> -->
             <a href="#contactus" class="item">Contact us</a>
         </div>
 
@@ -86,8 +90,8 @@
         <!-- HEADER/BANNER/MENU -->
         <div id="header" class="ui inverted vertical segment">
             <!-- navigate site button  -->
-            <i id="navigate-site" class="link huge inverted angle double down icon" 
-            style="position: absolute; bottom: 1%; left: 50%; transform: translate(-50%, -1%); z-index: 5;"></i>
+            <i id="navigate-site" class="link big inverted angle double down icon" 
+            style="position: absolute; bottom: 3%; left: 50%; transform: translate(-50%, -3%); z-index: 5;"></i>
             <img id="logo" class="ui large image" src="img/logo.png">
             </div>
         </div>

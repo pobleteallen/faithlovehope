@@ -14,29 +14,9 @@ body
 
 .ui.segment { border: none !important;}
 
-
-/*website preloader*/
-#site-loader 
+#site-loader
 {
-	position: fixed;
-	z-index: 99999999;
 	background: #fff;
-	min-height: 100%;
-	min-width: 100%;
-}
-#site-loader h2
-{
-	position: absolute;
-	top: 45%;
-	left: 50%;
-	transform: translate(-45%,-50%);
-}
-#site-loader i
-{
-	position: absolute;
-	top: 35%;
-	left: 47%;
-	transform: translate(-35%,-47%);
 }
 
 /*fixed menu webpage*/
@@ -60,7 +40,8 @@ body
 #header,
 #aboutus,
 #feedbacks,
-#contactus
+#contactus,
+#site-loader
 { 
 	position: relative;
 	min-height: 100vh !important; 
@@ -88,6 +69,7 @@ body
 
 #products .column.row { padding: 0 !important; background: #000;}
 #products .column.row .column { padding: 1px; cursor: pointer;}
+#products .column.row .column:hover img { opacity: .3;}
 #products .column .segment 
 { 
 	display: none; 
@@ -105,7 +87,7 @@ body
 
 @media only screen and (max-width: 767px){
 
-#navigation { display: none; }
+#navigation, #fixed-menu { display: none; }
 #mobile-menu 
 { 
 	position: fixed;
