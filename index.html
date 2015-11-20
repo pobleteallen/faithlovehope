@@ -46,14 +46,40 @@
             <a href="#contactus" class="item">Contact us</a>
         </div>
 
+        <!-- fixed menu -->
+        <div id="fixed-menu" class="ui large five item fixed menu" style="display: none;"> 
+            <div class="ui text container">
+                <a href="#header" class="active item">Home</a>
+                <a href="#aboutus" class="item">About us</a>
+                <div class="item">
+                    <img class="ui tiny image" src="img/logo.png" style="margin: 0 2rem;">
+                </div>
+                <div class="ui simple dropdown item">
+                    Products
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <a href="#purelove" class="item">Pure Love</a>
+                        <a href="#motherlove" class="item">Mother's Love</a>
+                        <a href="#amp" class="item">AMP</a>
+                        <a href="#cucumbermist" class="item">Cucumber Hydrating Mist</a>
+                        <a href="#tomatokokum" class="item">Tomato Kokum</a>
+                        <a href="#bugabye" class="item">Bug-a-Bye</a>
+                        <a href="#coffeesoap" class="item">Coffee Soap</a>
+                    </div>
+                </div>
+                <a href="#contactus" class="item">Contact us</a>
+                <div class="item"></div>
+            </div>
+        </div>
+
         <!-- list menu -->
-        <ul id="navigation"> 
+       <!--  <ul id="navigation"> 
             <li><a href="#header" >•</a></li>
             <li><a href="#aboutus" >○</a></li>
             <li><a href="#products" >○</a></li>
-            <!-- <li><a href="#feedbacks" >○</a></li> -->
+            <li><a href="#feedbacks" >○</a></li>
             <li><a href="#contactus" >○</a></li>
-        </ul>
+        </ul> -->
 
         <i id="mobile-menu" class="link large inverted sidebar icon icon"></i> 
 
@@ -79,7 +105,7 @@
         <div id="products" class="ui vertical segment">
             <div class="ui stackable equal width grid">
                 <div class="two column row">
-                    <div class="column">
+                    <div id="purelove" class="column">
                         <img class="ui image" src="img/products/purelove.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">Pure Love</h3>
@@ -87,7 +113,7 @@
                            Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
                         </div>
                     </div>
-                    <div class="column">
+                    <div id="motherlove" class="column">
                         <img class="ui image" src="img/products/motherlove.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">Mother's Love</h3>
@@ -97,7 +123,7 @@
                     </div>
                 </div>
                 <div class="three column row">
-                    <div class="column">
+                    <div id="amp" class="column">
                         <img class="ui image" src="img/products/amp.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">AMP</h3>
@@ -105,7 +131,7 @@
                            Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
                         </div>
                     </div>
-                    <div class="column">
+                    <div id="cucumbermist" class="column">
                         <img class="ui image" src="img/products/cucumbermist.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">Cucumber Hydrating Mist</h3>
@@ -113,7 +139,7 @@
                            Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
                         </div>
                     </div>
-                    <div class="column">
+                    <div id="tomatokokum" class="column">
                         <img class="ui image" src="img/products/tomatokokum.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">Tomato Kokum</h3>
@@ -123,7 +149,7 @@
                     </div>
                 </div>
                 <div class="two column row">
-                    <div class="column">
+                    <div id="bugabye" class="column">
                         <img class="ui image" src="img/products/bugabye.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">Bug-a-Bye</h3>
@@ -131,7 +157,7 @@
                            Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. Mes cumldi sed inertio. Lacus ut eniascet ingerto aliiqt sit amet eism odictor ipsum commete. Dolore cuml dia sed in lacus ut eniascet inger es sitet amet eismod ictor ut ligulate ameti dapib ticdu nt mtsent dolor lte comme. 
                         </div>
                     </div>
-                    <div class="column">
+                    <div id="coffeesoap" class="column">
                         <img class="ui image" src="img/products/coffeesoap.jpg">
                         <div class="ui vertical segment product-description">
                             <h3 class="ui center aligned header">Coffee Soap</h3>
@@ -179,7 +205,7 @@
                     <div class="sub header">Get in touch with us</div>
                 </h2>
 
-                <div class="ui stackable equal width grid" style="margin-top: 5rem;">
+                <div class="ui stackable equal width grid" style="margin-top: 10rem;">
                     <div class="column">
                         <h3 class="ui circular center aligned icon header">
                             <i class="circular facebook link icon"></i>
